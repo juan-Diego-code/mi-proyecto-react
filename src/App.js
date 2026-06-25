@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// src/App.js
+
 import './App.css';
+import Navbar      from './components/Navbar/Navbar';
+import Hero        from './components/Hero/Hero';
+import SobreMi     from './components/SobreMi/SobreMi';
+import Tecnologias from './components/Tecnologias/Tecnologias';
+import Proyectos   from './components/Proyectos/Proyectos';
+import Contacto    from './components/Contacto/Contacto';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Este es mi primer proyecto en React, estoy aprendiendo a usarlo y me parece muy interesante.
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/juan-Diego-code"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Mi GitHub
-        </a>
-      </header>
+      <Navbar />
+      <main>
+        <Hero />
+        <SobreMi />
+        <Tecnologias />
+        <Proyectos />
+        <Contacto />
+      </main>
     </div>
   );
 }
