@@ -1,6 +1,8 @@
 // src/components/Contacto/Contacto.js
 
-import './Contacto.css';
+import "./Contacto.css";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 function Contacto() {
   return (
@@ -17,7 +19,7 @@ function Contacto() {
       <div className="contacto-links">
 
         <a href="mailto:juandcortesa11@gmail.com" className="contacto-card">
-          <span>📧</span>
+          <SiGmail className="contacto-icono gmail" />
           <span>juandcortesa11@gmail.com</span>
         </a>
 
@@ -27,7 +29,7 @@ function Contacto() {
           rel="noopener noreferrer"
           className="contacto-card"
         >
-          <span>🐙</span>
+          <FaGithub className="contacto-icono github" />
           <span>GitHub</span>
         </a>
 
@@ -37,14 +39,14 @@ function Contacto() {
           rel="noopener noreferrer"
           className="contacto-card"
         >
-          <span>📸</span>
+          <FaInstagram className="contacto-icono instagram" />
           <span>@juanx_x112</span>
         </a>
 
       </div>
 
       <footer className="footer">
-        <p>© 2026 Juan Diego Cortés · Hecho con React 💻</p>
+        <p>© 2026 Juan Diego Cortés · Hecho con React</p>
       </footer>
 
     </section>

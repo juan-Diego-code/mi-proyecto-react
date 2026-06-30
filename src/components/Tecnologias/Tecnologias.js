@@ -1,35 +1,70 @@
 // src/components/Tecnologias/Tecnologias.js
 
-import './Tecnologias.css';
+import "./Tecnologias.css";
 
-// Cada tecnología tiene nombre, ícono (emoji o imagen) y color
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
+
+import { SiPython } from "react-icons/si";
+
 const techs = [
-  { nombre: 'Python',     icono: '🐍', color: '#3776ab' },
-  { nombre: 'HTML5',      icono: '🌐', color: '#e34f26' },
-  { nombre: 'CSS3',       icono: '🎨', color: '#1572b6' },
-  { nombre: 'JavaScript', icono: '⚡', color: '#f7df1e' },
-  { nombre: 'Git',        icono: '🔀', color: '#f05032' },
-  { nombre: 'GitHub',     icono: '🐙', color: '#ffffff' },
+  {
+    nombre: "HTML5",
+    icono: FaHtml5,
+    color: "#E34F26",
+  },
+  {
+    nombre: "CSS3",
+    icono: FaCss3Alt,
+    color: "#1572B6",
+  },
+  {
+    nombre: "JavaScript",
+    icono: FaJs,
+    color: "#F7DF1E",
+  },
+  {
+    nombre: "Python",
+    icono: SiPython,
+    color: "#3776AB",
+  },
+  {
+    nombre: "Git",
+    icono: FaGitAlt,
+    color: "#F05032",
+  },
+  {
+    nombre: "GitHub",
+    icono: FaGithub,
+    color: "#FFFFFF",
+  },
 ];
 
 function Tecnologias() {
   return (
     <section id="tecnologias" className="tecnologias">
-
-      <h2 className="seccion-titulo">
-        Tecnologías
-      </h2>
+      <h2 className="seccion-titulo">Tecnologías</h2>
 
       <div className="tech-grid">
-        {/* .map() recorre el arreglo y crea una tarjeta por cada tecnología */}
-        {techs.map((tech) => (
-          <div key={tech.nombre} className="tech-card">
-            <span className="tech-icono">{tech.icono}</span>
-            <span className="tech-nombre">{tech.nombre}</span>
-          </div>
-        ))}
-      </div>
+        {techs.map((tech) => {
+          const Icon = tech.icono;
 
+          return (
+            <div key={tech.nombre} className="tech-card">
+              <Icon
+                className="tech-icono"
+                style={{ color: tech.color }}
+              />
+              <span className="tech-nombre">{tech.nombre}</span>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
