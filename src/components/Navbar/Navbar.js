@@ -38,6 +38,7 @@ function Navbar() {
       {/* La clase 'active' aparece cuando menuOpen es true */}
       <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
         <li><a href="#sobre-mi"    onClick={handleLinkClick}>Sobre mí</a></li>
+        <li><a href="#timeline"    onClick={handleLinkClick}>Mi Camino</a></li>
         <li><a href="#tecnologias" onClick={handleLinkClick}>Tecnologías</a></li>
         <li><a href="#proyectos"   onClick={handleLinkClick}>Proyectos</a></li>
         <li><a href="#contacto"    onClick={handleLinkClick}>Contacto</a></li>

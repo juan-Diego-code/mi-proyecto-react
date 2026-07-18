@@ -7,6 +7,7 @@ import SobreMi     from './components/SobreMi/SobreMi';
 import Tecnologias from './components/Tecnologias/Tecnologias';
 import Proyectos   from './components/Proyectos/Proyectos';
 import Contacto    from './components/Contacto/Contacto';
+import Timeline    from './components/Timeline/Timeline';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Hero />
         <SobreMi />
+        <Timeline />
         <Tecnologias />
         <Proyectos />
         <Contacto />

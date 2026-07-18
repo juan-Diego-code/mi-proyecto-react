@@ -1,0 +1,172 @@
+/* src/components/Timeline/Timeline.css */
+
+.timeline {
+  padding: 6rem 2.5rem;
+  background-color: #111111;
+  text-align: center;
+}
+
+/* Contenedor de la línea horizontal */
+.timeline-horizontal {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 4rem auto 0;
+  padding: 0 1rem;
+}
+
+/* La línea roja horizontal */
+.timeline-linea {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #dc2626;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* Cada nodo (punto + año + card) */
+.timeline-nodo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* El punto sobre la línea */
+.nodo-punto {
+  width: 16px;
+  height: 16px;
+  background: #1a1a1a;
+  border: 3px solid #dc2626;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 0.8rem;
+}
+
+/* El punto se rellena al hacer hover */
+.nodo-punto.activo {
+  background: #dc2626;
+  transform: scale(1.4);
+}
+
+/* El año debajo del punto */
+.nodo-año {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #aaaaaa;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.timeline-nodo:hover .nodo-año {
+  color: #dc2626;
+}
+
+/* La card que aparece al hacer hover */
+.nodo-card {
+  position: absolute;
+  bottom: 4rem;        /* Aparece arriba del punto */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 230px;
+  background: #1a1a1a;
+  border: 1px solid #dc2626;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: left;
+  z-index: 10;
+
+  /* Animación de aparición */
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Triángulo que conecta la card con el punto */
+.nodo-card::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #dc2626;
+}
+
+.timeline-año {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #dc2626;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nodo-card h3 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.4rem 0;
+}
+
+.nodo-card p {
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: #2a2a2a;
+  color: #dc2626;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  border: 1px solid #dc2626;
+}
+
+/* Móvil — scroll horizontal */
+@media (max-width: 768px) {
+  .timeline-horizontal {
+    overflow-x: auto;
+    padding: 0 2rem;
+    gap: 3rem;
+    justify-content: flex-start;
+  }
+
+  .timeline-nodo {
+    min-width: 80px;
+  }
+
+  .nodo-card {
+    width: 200px;
+  }
+}
+
+/* Ícono dentro del tag */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tag-icono {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
