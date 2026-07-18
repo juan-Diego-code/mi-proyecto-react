@@ -170,3 +170,22 @@
   align-items: center;
   font-size: 0.9rem;
 }
+/* Texto de ayuda — solo visible en móvil */
+.timeline-ayuda {
+  display: none;
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-ayuda {
+    display: block;
+  }
+
+  /* La card en móvil aparece arriba con más ancho */
+  .nodo-card {
+    width: 180px;
+    bottom: 3.5rem;
+  }
+}
