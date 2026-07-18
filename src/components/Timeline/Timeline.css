@@ -6,7 +6,6 @@
   text-align: center;
 }
 
-/* Contenedor de la línea horizontal */
 .timeline-horizontal {
   position: relative;
   display: flex;
@@ -17,7 +16,6 @@
   padding: 0 1rem;
 }
 
-/* La línea roja horizontal */
 .timeline-linea {
   position: absolute;
   top: 50%;
@@ -29,7 +27,6 @@
   z-index: 0;
 }
 
-/* Cada nodo (punto + año + card) */
 .timeline-nodo {
   position: relative;
   display: flex;
@@ -37,9 +34,11 @@
   align-items: center;
   cursor: pointer;
   z-index: 1;
+  /* Espacio extra arriba para que la card no se corte */
+  padding-top: 160px;
+  margin-top: -160px;
 }
 
-/* El punto sobre la línea */
 .nodo-punto {
   width: 16px;
   height: 16px;
@@ -50,41 +49,41 @@
   margin-bottom: 0.8rem;
 }
 
-/* El punto se rellena al hacer hover */
 .nodo-punto.activo {
   background: #dc2626;
   transform: scale(1.4);
 }
 
-/* El año debajo del punto */
 .nodo-año {
   font-size: 0.85rem;
   font-weight: 700;
   color: #aaaaaa;
   letter-spacing: 1px;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
-.timeline-nodo:hover .nodo-año {
+.timeline-nodo:hover .nodo-año,
+.timeline-nodo:focus .nodo-año {
   color: #dc2626;
 }
 
-/* La card que aparece al hacer hover */
+/* Card — escritorio: aparece arriba */
 .nodo-card {
   position: absolute;
-  bottom: 4rem;        /* Aparece arriba del punto */
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 230px;
+  width: 220px;
   background: #1a1a1a;
   border: 1px solid #dc2626;
   border-radius: 12px;
   padding: 1.2rem;
   text-align: left;
-  z-index: 10;
-
-  /* Animación de aparición */
+  z-index: 100;
   animation: fadeIn 0.2s ease;
+  /* Sombra para que resalte sobre otros elementos */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
 
 @keyframes fadeIn {
@@ -92,7 +91,6 @@
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* Triángulo que conecta la card con el punto */
 .nodo-card::after {
   content: '';
   position: absolute;
@@ -138,28 +136,6 @@
   border-radius: 20px;
   font-size: 0.75rem;
   border: 1px solid #dc2626;
-}
-
-/* Móvil — scroll horizontal */
-@media (max-width: 768px) {
-  .timeline-horizontal {
-    overflow-x: auto;
-    padding: 0 2rem;
-    gap: 3rem;
-    justify-content: flex-start;
-  }
-
-  .timeline-nodo {
-    min-width: 80px;
-  }
-
-  .nodo-card {
-    width: 200px;
-  }
-}
-
-/* Ícono dentro del tag */
-.tag {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -170,7 +146,7 @@
   align-items: center;
   font-size: 0.9rem;
 }
-/* Texto de ayuda — solo visible en móvil */
+
 .timeline-ayuda {
   display: none;
   color: #aaaaaa;
@@ -178,14 +154,41 @@
   margin-bottom: 2rem;
 }
 
+/* ── Móvil ── */
 @media (max-width: 768px) {
   .timeline-ayuda {
     display: block;
   }
 
-  /* La card en móvil aparece arriba con más ancho */
+  .timeline-horizontal {
+    overflow-x: auto;
+    padding: 2rem 1rem 12rem; /* Espacio abajo para la card */
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .timeline-nodo {
+    min-width: 70px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  /* En móvil la card aparece ABAJO del punto */
   .nodo-card {
-    width: 180px;
-    bottom: 3.5rem;
+    bottom: auto;
+    top: 3rem;
+    width: 200px;
+    /* Evita que se salga por la derecha en el último nodo */
+    left: 0;
+    transform: none;
+  }
+
+  /* El triángulo apunta hacia arriba en móvil */
+  .nodo-card::after {
+    bottom: auto;
+    top: -8px;
+    border-top: none;
+    border-bottom: 8px solid #dc2626;
   }
 }
