@@ -48,3 +48,7 @@
   color: #cccccc;
   font-weight: 500;
 }
+
+.tecnologias { background-color: var(--bg-secundario); }
+.tech-card { background: var(--bg-tarjeta); border-color: var(--color-borde); }
+.tech-nombre { color: var(--color-texto-suave); }

@@ -97,3 +97,10 @@
 }
 
 .btn-secundario:hover { background-color: #dc2626; }
+
+.proyectos { background-color: var(--bg-principal); }
+.proyecto-card { background: var(--bg-tarjeta); border-color: var(--color-borde); }
+.proyecto-card-body h3 { color: var(--color-texto); }
+.proyecto-card-body p { color: var(--color-texto-tenue); }
+.tag { background: var(--bg-tarjeta-hover); }
+.btn-secundario { color: var(--color-texto); }

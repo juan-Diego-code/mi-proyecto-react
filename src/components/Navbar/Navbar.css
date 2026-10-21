@@ -141,3 +141,32 @@
 .btn-idioma:hover {
   background: #dc2626;
 }
+
+.navbar.scrolled { background: var(--bg-principal); }
+.navbar-logo { color: var(--color-texto); }
+.navbar-links a { color: var(--color-texto-suave); }
+.navbar-links a:hover { color: var(--color-texto); }
+.hamburger span { background: var(--color-texto); }
+.navbar-links { background: var(--bg-secundario); }
+.btn-idioma { color: var(--color-texto); }
+
+.navbar-botones {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-modo {
+  background: transparent;
+  border: 1px solid var(--color-rojo);
+  color: var(--color-texto);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.btn-modo:hover {
+  background: var(--color-rojo);
+}

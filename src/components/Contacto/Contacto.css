@@ -67,3 +67,31 @@
   color: #555555;
   font-size: 0.85rem;
 }
+
+.contacto {
+  background-color: var(--bg-secundario);
+}
+
+.contacto-subtitulo {
+  color: var(--color-texto-tenue);
+}
+
+.contacto-card {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto-suave);
+}
+
+.contacto-card:hover {
+  border-color: var(--color-rojo);
+  color: var(--color-texto);
+}
+
+.github {
+  color: var(--color-texto);
+}
+
+.footer {
+  border-top: 1px solid var(--color-borde);
+  color: var(--color-footer);
+}

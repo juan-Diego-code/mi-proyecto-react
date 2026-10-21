@@ -6,11 +6,18 @@ import { useTranslation } from 'react-i18next';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // <- Nuevo: controla el menú
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [modoClaro, setModoClaro] = useState(false);
 
   const { t, i18n } = useTranslation();
+
   const cambiarIdioma = () => {
-  i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es');
+    i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es');
+  };
+
+  const toggleModo = () => {
+    setModoClaro(!modoClaro);
+    document.body.classList.toggle('claro');
   };
 
   useEffect(() => {
@@ -19,7 +26,6 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Cierra el menú cuando el usuario hace click en un link
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
@@ -29,8 +35,6 @@ function Navbar() {
         DC<span>.</span>
       </a>
 
-      {/* Botón hamburguesa — solo visible en móvil */}
-      {/* Al hacer click alterna entre true/false */}
       <button
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -41,7 +45,6 @@ function Navbar() {
         <span></span>
       </button>
 
-      {/* La clase 'active' aparece cuando menuOpen es true */}
       <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
         <li><a href="#sobre-mi"    onClick={handleLinkClick}>{t('navbar.sobreMi')}</a></li>
         <li><a href="#tecnologias" onClick={handleLinkClick}>{t('navbar.tecnologias')}</a></li>
@@ -50,10 +53,14 @@ function Navbar() {
         <li><a href="#contacto"    onClick={handleLinkClick}>{t('navbar.contacto')}</a></li>
       </ul>
 
-      {/* Botón de idioma */}
-      <button className="btn-idioma" onClick={cambiarIdioma}>
-        {i18n.language === 'es' ? 'EN' : 'ES'}
-      </button>
+      <div className="navbar-botones">
+         <button className="btn-modo" onClick={toggleModo} aria-label="Cambiar tema">
+          {modoClaro ? '🌙' : '☀️'}
+         </button>
+        <button className="btn-idioma" onClick={cambiarIdioma}>
+         {i18n.language === 'es' ? 'EN' : 'ES'}
+        </button>
+      </div>
 
     </nav>
   );

@@ -86,3 +86,9 @@
     justify-content: center;
   }
 }
+
+.sobre-mi { background-color: var(--bg-principal); }
+.sobre-mi-texto p { color: var(--color-texto-suave); }
+.frase-destacada { color: var(--color-texto) !important; }
+.dato { background: var(--bg-tarjeta); }
+.dato-label { color: var(--color-texto-tenue); }
