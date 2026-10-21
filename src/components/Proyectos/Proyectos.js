@@ -19,8 +19,8 @@ const proyectos = [
   {
     id: 3,
     tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/juan-Diego-code/Landing-Page-ViviendasyValores',
-    demo: 'https://juan-diego-code.github.io/Landing-Page-ViviendasyValores/',
+    github: 'https://github.com/juan-Diego-code/El-Camino-del-Anillo.git',
+    demo: 'https://juan-diego-code.github.io/El-Camino-del-Anillo/',
   },
 ];
 
