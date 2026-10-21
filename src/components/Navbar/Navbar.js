@@ -55,7 +55,7 @@ function Navbar() {
 
       <div className="navbar-botones">
          <button className="btn-modo" onClick={toggleModo} aria-label="Cambiar tema">
-          {modoClaro ? '🌙' : '☀️'}
+          {modoClaro ? '☾' : '☀︎'}
          </button>
         <button className="btn-idioma" onClick={cambiarIdioma}>
          {i18n.language === 'es' ? 'EN' : 'ES'}
