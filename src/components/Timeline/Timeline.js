@@ -78,7 +78,7 @@ function Timeline() {
 
   const { t } = useTranslation();
   // Los hitos ahora vienen del json
-  const trayectoria = t('timeline.hitos', { returnObjects: true });
+  const hitos = t('timeline.hitos', { returnObjects: true });
   return (
     <section id="timeline" className="timeline">
 
