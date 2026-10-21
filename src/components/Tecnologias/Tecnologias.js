@@ -1,6 +1,7 @@
 // src/components/Tecnologias/Tecnologias.js
 
 import "./Tecnologias.css";
+import { useTranslation } from 'react-i18next';
 
 import {
   FaHtml5,
@@ -46,9 +47,10 @@ const techs = [
 ];
 
 function Tecnologias() {
+  const { t } = useTranslation();
   return (
     <section id="tecnologias" className="tecnologias">
-      <h2 className="seccion-titulo">Tecnologías</h2>
+      <h2 className="seccion-titulo">{t('tecnologias.titulo')}<span>{t('tecnologias.tituloSpan')}</span></h2>
 
       <div className="tech-grid">
         {techs.map((tech) => {

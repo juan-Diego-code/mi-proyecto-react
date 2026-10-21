@@ -1,0 +1,80 @@
+{
+    "navbar": {
+      "sobreMi": "About me",
+      "miCamino": "My journey",
+      "tecnologias": "Technologies",
+      "proyectos": "Projects",
+      "contacto": "Contact"
+    },
+    "hero": {
+      "botonProyectos": "View projects",
+      "botonGithub": "GitHub"
+    },
+    "sobreMi": {
+      "titulo": "About",
+      "tituloSpan": "me",
+      "p1": "Hi, I'm Juan Diego, a Software Development student passionate about building modern and functional web solutions.",
+      "p2": "I'm currently learning React, building real projects and improving every day. I believe well-written code is a form of art.",
+      "frase": "Learning today, building the",
+      "fraseSpan": "future",
+      "tecnologias": "Technologies",
+      "proyectos": "Projects",
+      "compromiso": "Commitment"
+    },
+    "timeline": {
+      "titulo": "My",
+      "tituloSpan": "Journey",
+      "ayuda": "Tap each point to learn more",
+      "hitos": [
+        {
+          "año": "2024",
+          "titulo": "The Beginning",
+          "descripcion": "I took my first steps in programming by learning Python. Logic, variables, functions — the foundation of everything."
+        },
+        {
+          "año": "2025",
+          "titulo": "The Web World",
+          "descripcion": "I entered web development with HTML and CSS. I learned to build and style pages from scratch."
+        },
+        {
+          "año": "2026",
+          "titulo": "New Horizons",
+          "descripcion": "I learned React by building this portfolio from scratch. Components, hooks, state, deployment on Vercel."
+        },
+        {
+          "año": "Now",
+          "titulo": "Moving Forward",
+          "descripcion": "Continuing my journey, learning every day and building projects that bring me closer to the job market."
+        }
+      ]
+    },
+    "tecnologias": {
+      "titulo": "Tech",
+      "tituloSpan": "nologies"
+    },
+    "proyectos": {
+      "titulo": "My",
+      "tituloSpan": "Projects",
+      "verDemo": "Live Demo",
+      "items": [
+        {
+          "titulo": "JAC Quinta Oriental Page",
+          "descripcion": "Official website for the Quinta Oriental Community Action Board. Neighborhood info, news and contact."
+        },
+        {
+          "titulo": "Los Prisioneros Blog",
+          "descripcion": "Blog dedicated to the Spanish-language rock band Los Prisioneros, created by Juan Diego Cortés."
+        },
+        {
+          "titulo": "Viviendas y Valores Landing Page",
+          "descripcion": "Professional landing page for a real estate company. Property and services showcase."
+        }
+      ]
+    },
+    "contacto": {
+      "titulo": "Con",
+      "tituloSpan": "tact",
+      "subtitulo": "Have a project or want to connect? Write to me.",
+      "footer": "Made with React"
+    }
+  }

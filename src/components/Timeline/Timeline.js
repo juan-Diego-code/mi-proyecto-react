@@ -7,6 +7,7 @@ import {
   FaGitAlt, FaReact, FaDocker, FaDatabase, FaNodeJs,
 } from 'react-icons/fa';
 import { SiTypescript, SiVercel } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 const iconos = {
   Python:      <FaPython />,
@@ -75,15 +76,16 @@ function Timeline() {
     setActivo(null);
   };
 
+  const { t } = useTranslation();
+  // Los hitos ahora vienen del json
+  const trayectoria = t('timeline.hitos', { returnObjects: true });
   return (
     <section id="timeline" className="timeline">
 
-      <h2 className="seccion-titulo">
-        Mi <span>Camino</span>
-      </h2>
+      <h2 className="seccion-titulo">{t('timeline.titulo')} <span>{t('timeline.tituloSpan')}</span></h2>
 
       {/* Texto de ayuda solo visible en móvil */}
-      <p className="timeline-ayuda">Toca cada punto para ver más</p>
+      <p className="timeline-ayuda">{t('timeline.ayuda')}</p>
 
       <div className="timeline-horizontal">
 

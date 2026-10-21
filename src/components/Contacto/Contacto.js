@@ -3,18 +3,15 @@
 import "./Contacto.css";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { useTranslation } from 'react-i18next';
 
 function Contacto() {
+  const { t } = useTranslation();
   return (
     <section id="contacto" className="contacto">
 
-      <h2 className="seccion-titulo">
-        Contacto
-      </h2>
-
-      <p className="contacto-subtitulo">
-        ¿Tienes un proyecto o quieres conectar? Escríbeme.
-      </p>
+      <h2 className="seccion-titulo">{t('contacto.titulo')}<span>{t('contacto.tituloSpan')}</span></h2>
+      <p className="contacto-subtitulo">{t('contacto.subtitulo')}</p>
 
       <div className="contacto-links">
 
@@ -46,7 +43,7 @@ function Contacto() {
       </div>
 
       <footer className="footer">
-        <p>© 2026 Juan Diego Cortés · Hecho con React</p>
+        <p>© 2026 Juan Diego Cortés · {t('contacto.footer')} Hecho Con React</p>
       </footer>
 
     </section>

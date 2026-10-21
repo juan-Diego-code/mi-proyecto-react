@@ -1,0 +1,80 @@
+{
+    "navbar": {
+      "sobreMi": "Sobre mí",
+      "miCamino": "Mi camino",
+      "tecnologias": "Tecnologías",
+      "proyectos": "Proyectos",
+      "contacto": "Contacto"
+    },
+    "hero": {
+      "botonProyectos": "Ver proyectos",
+      "botonGithub": "GitHub"
+    },
+    "sobreMi": {
+      "titulo": "Sobre",
+      "tituloSpan": "mí",
+      "p1": "Hola, soy Juan Diego, estudiante de Desarrollo de Software apasionado por crear soluciones web modernas y funcionales.",
+      "p2": "Actualmente estoy aprendiendo React, construyendo proyectos reales y mejorando cada día. Creo que el código bien escrito es una forma de arte.",
+      "frase": "Aprendiendo hoy, construyendo el",
+      "fraseSpan": "futuro",
+      "tecnologias": "Tecnologías",
+      "proyectos": "Proyectos",
+      "compromiso": "Compromiso"
+    },
+    "timeline": {
+      "titulo": "Mi",
+      "tituloSpan": "Camino",
+      "ayuda": "Toca cada punto para ver más",
+      "hitos": [
+        {
+          "año": "2024",
+          "titulo": "El Comienzo",
+          "descripcion": "Di mis primeros pasos en programación aprendiendo Python. Lógica, variables, funciones — la base de todo."
+        },
+        {
+          "año": "2025",
+          "titulo": "El Mundo Web",
+          "descripcion": "Entré al desarrollo web con HTML y CSS. Aprendí a construir y estilizar páginas desde cero."
+        },
+        {
+          "año": "2026",
+          "titulo": "Nuevos Horizontes",
+          "descripcion": "Aprendí React construyendo este portafolio desde cero. Componentes, hooks, estado, despliegue en Vercel."
+        },
+        {
+          "año": "Ahora",
+          "titulo": "Siguiendo Adelante",
+          "descripcion": "Continuando mi camino, aprendiendo cada día y construyendo proyectos que me acercan más al mundo laboral."
+        }
+      ]
+    },
+    "tecnologias": {
+      "titulo": "Tec",
+      "tituloSpan": "nologías"
+    },
+    "proyectos": {
+      "titulo": "Mis",
+      "tituloSpan": "Proyectos",
+      "verDemo": "Ver Demo",
+      "items": [
+        {
+          "titulo": "Página JAC Quinta Oriental",
+          "descripcion": "Sitio web oficial para la Junta de Acción Comunal Quinta Oriental. Información del barrio, noticias y contacto."
+        },
+        {
+          "titulo": "Blog de Los Prisioneros",
+          "descripcion": "Blog dedicado a la banda de rock en español Los Prisioneros, creado por Juan Diego Cortés."
+        },
+        {
+          "titulo": "Landing Page Viviendas y Valores",
+          "descripcion": "Landing page profesional para empresa inmobiliaria. Presentación de propiedades y servicios."
+        }
+      ]
+    },
+    "contacto": {
+      "titulo": "Con",
+      "tituloSpan": "tacto",
+      "subtitulo": "¿Tienes un proyecto o quieres conectar? Escríbeme.",
+      "footer": "Hecho con React"
+    }
+  }

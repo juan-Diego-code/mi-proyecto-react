@@ -124,3 +124,20 @@
     font-size: 1.2rem;
   }
 }
+
+.btn-idioma {
+  background: transparent;
+  border: 1px solid #dc2626;
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: background 0.3s ease;
+  margin-left: 1rem;
+}
+
+.btn-idioma:hover {
+  background: #dc2626;
+}
