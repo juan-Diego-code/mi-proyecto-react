@@ -43,7 +43,7 @@ function Contacto() {
       </div>
 
       <footer className="footer">
-        <p>© 2026 Juan Diego Cortés · {t('contacto.footer')} Hecho Con React</p>
+        <p>© 2026 Juan Diego Cortés · {t('contacto.footer')} </p>
       </footer>
 
     </section>
